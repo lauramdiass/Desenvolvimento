@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <meta charset="utf-8">
+  
+  <title>Editar PCD</title>
+
+  <!-- start: Css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+  <!-- plugins -->
+  <link rel="stylesheet" type="text/css" href="../css/plugins/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/plugins/animate.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/plugins/nouislider.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/plugins/select2.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/plugins/ionrangeslider/ion.rangeSlider.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/plugins/ionrangeslider/ion.rangeSlider.skinFlat.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/plugins/bootstrap-material-datetimepicker.css"/>
+  <link href="../css/style.css" rel="stylesheet">
+  <!-- end: Css -->
+
+  
+</head>
+
+<body id="mimin" class="dashboard">
+	<div class="col-md-10">
+		<div class="col-md-12 panel">
+             <div class="col-md-12 panel-heading">
+				<h4>Editar PCD</h4>
+             </div>
+				<div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
+					  
+					  <!-- CONECTA PHP-->
+						
+						<form class="cmxform" id="signupForm" action="edicao.php" role="form" method="post">
+						
+							<div class="col-md-6"> <!-- INICIO DA COLUNA DA ESQUERDA NO FORMULARIO -->
+							
+							Dados do aluno
+							
+											
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_firstname" name="firstname" required>
+									<span class="bar"></span>
+									<label>Nome:</label>
+								</div>
+
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_lastname" name="lastname" required>
+									<span class="bar"></span>
+									<label>Sobrenome:</label>
+								</div>
+								
+								<div class="form-group" style="margin-top:40px !important;">
+										<label style="font-size:18px; color:#999999; margin-right:5px; padding-left:5px">Sexo:</label>
+										<select name="sex" required>
+											<option value>Selecione o sexo</option>
+											<option value="masculino">Masculino</option>
+											<option value="feminino">Feminino</option>
+											<option value="outro">Outro</option>
+										</select>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text mask-date" id="validate_borndate" name="borndate" required>
+									<span class="bar"></span>
+									<label>Data de Nascimento:</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_city" name="city" required>
+									<span class="bar"></span>
+									<label>Cidade:</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_neighborhood" name="neighborhood" required>
+									<span class="bar"></span>
+									<label>Bairro:</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_address" name="address" required>
+									<span class="bar"></span>
+									<label>Endereço:</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="complement">
+									<span class="bar"></span>
+									<label>Complemento:</label>
+								</div>
+								
+								
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text mask-cep" id="validate_zipcode" name="zipcode" required>
+									<span class="bar"></span>
+									<label>CEP:</label>
+								</div>
+								
+						
+								
+							</div><!-- FIM DA COLUNA DA ESQUERDA NO FORMULARIO -->
+							
+														
+												
+							<div class="col-md-6"> <!-- INICIO DA COLUNA DA DIREITA NO FORMULARIO -->	
+							
+									Dados do responsável legal
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_firstname" name="firstname_res" required>
+									<span class="bar"></span>
+									<label>Nome:</label>
+								</div>
+
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" id="validate_lastname" name="lastname_res" required>
+									<span class="bar"></span>
+									<label>Sobrenome:</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text mask-cpf" id="validate_cpf" name="cpf" required>
+									<span class="bar"></span>
+									<label>CPF:</label>
+								</div>
+								
+													
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text mask-sp_celphones" name="telephone" required>
+									<span class="bar"></span>
+									<label>Telefone para contato:</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text mask-sp_celphones" name="telephone2" required>
+									<span class="bar"></span>
+									<label>Telefone 2 para contato:</label>
+								</div>
+																
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text email" id="validate_email" name="email">
+									<span class="bar"></span>
+									<label>Email:</label>
+								</div>
+							
+														
+																	
+								
+						
+																
+							</div>  <!-- FIM DA COLUNA DA DIREITA NO FORMULARIO -->    
+							
+								<div class="col-md-12">  <!-- INICIO DA LINHA EXTRA DA COLUNA DA ESQUERDA -->
+								<input class="submit btn btn-danger" type="submit" value="Enviar">
+								</div>  <!-- FINAL DA LINHA EXTRA DA COLUNA DA ESQUERDA -->						
+							
+					
+						
+						</form>
+
+					</div>
+				</div>
+		</div>
+	</div>
+	
+	
+<!-- start: Javascript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.ui.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+
+<!-- plugins -->
+<script src="../js/plugins/moment.min.js"></script>
+<script src="../js/plugins/jquery.knob.js"></script>
+<script src="../js/plugins/ion.rangeSlider.min.js"></script>
+<script src="../js/plugins/bootstrap-material-datetimepicker.js"></script>
+<script src="../js/plugins/jquery.nicescroll.js"></script>
+<script src="../js/plugins/jquery.mask.min.js"></script>
+<script src="../js/plugins/select2.full.min.js"></script>
+<script src="../js/plugins/nouislider.min.js"></script>
+<script src="../js/plugins/jquery.validate.min.js"></script>
+
+
+<!-- custom -->
+<script src="../js/main.js"></script>
+<script type="text/javascript">
+
+  
+  $(document).ready(function(){
+
+$("#validate_borndate").focusout(function(){
+var borndate = $("#validate_borndate").val();
+var matchArray = borndate.split("/");
+if (borndate == '') {
+$('#validate_borndate').css('color','#FF968B');
+return false;
+}
+var day = matchArray[0];
+//alert(day);
+var month = matchArray[1];
+//alert(month);
+var year = matchArray[2];
+//alert(year);
+
+if (day < 1 || day > 31) {
+$('#validate_borndate').css('color','#FF968B');
+return false;
+}
+if (month < 1 || month > 12) { // check month range
+$('#validate_borndate').css('color','#FF968B');
+return false;
+}
+if ((month==4 || month==6 || month==9 || month==11) && day==31) {
+$('#validate_borndate').css('color','#FF968B');
+return false;
+}
+if (month == 2) { // check for february 29th
+var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+if (day>29 || (day==29 && !isleap)) {
+$('#validate_borndate').css('color','#FF968B');
+return false;
+   }
+}
+return true;  // date is valid
+});
+
+  
+$("#validate_cpf").focusout(function(){ 
+strCPF = $("#validate_cpf").val(); 
+strCPF = strCPF.replace(/[^\d]+/g,''); 
+var Soma; 
+var Resto; 
+var cboll = true; 
+Soma = 0; 
+
+if (strCPF.length != 11 || 
+strCPF == "00000000000" || 
+strCPF == "11111111111" || 
+strCPF == "22222222222" || 
+strCPF == "33333333333" || 
+strCPF == "44444444444" || 
+strCPF == "55555555555" || 
+strCPF == "66666666666" || 
+strCPF == "77777777777" || 
+strCPF == "88888888888" || 
+strCPF == "99999999999") 
+cboll = false; 
+
+for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i); 
+Resto = (Soma * 10) % 11; 
+
+if ((Resto == 10) || (Resto == 11)) Resto = 0; 
+if (Resto != parseInt(strCPF.substring(9, 10)) ) cboll = false; 
+
+Soma = 0; 
+for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i); 
+Resto = (Soma * 10) % 11; 
+
+if ((Resto == 10) || (Resto == 11)) Resto = 0; 
+if (Resto != parseInt(strCPF.substring(10, 11) ) ) cboll = false; 
+
+if(!cboll){ 
+$('#validate_cpf').css('color','#FF968B');
+
+}else{ 
+$('#validate_cpf').css('color','#58666E'); 
+return cboll; 
+}
+});
+  
+ 
+
+    $("#signupForm").validate({
+      errorElement: "em",
+      errorPlacement: function(error, element) {
+        $(element.parent("div").addClass("form-animate-error"));
+        error.appendTo(element.parent("div"));
+      },
+      success: function(label) {
+        $(label.parent("div").removeClass("form-animate-error"));
+      },
+      rules: {
+        validate_firstname: "required",
+        validate_lastname: "required",
+        validate_username: {
+          required: true,
+          minlength: 2
+        },
+		validate_telephone1: {
+		  required: true,
+		  minlength: 14
+		},
+		validate_telephone2: {
+		  required: true,
+		  minlength: 14
+		},
+		validate_borndate: {
+		  required: true,
+		  minlength: 10
+		},
+		validate_cpf: {
+		  required: true,
+		  minlength: 14
+		},
+		validate_password: {
+          required: true,
+          minlength: 5
+        },
+        validate_confirm_password: {
+          required: true,
+          minlength: 5,
+          equalTo: "#validate_password"
+        },
+        validate_email: {
+          required: false,
+          email: true
+        },
+        validate_agree: "required"
+      },
+      messages: {
+        validate_firstname: "Informe o nome",
+        validate_lastname: "Informe o sobrenome",
+        validate_username: {
+          required: "Please enter a username",
+          minlength: "Your username must consist of at least 2 characters"
+        },
+        validate_password: {
+          required: "Please provide a password",
+          minlength: "Your password must be at least 5 characters long"
+        },
+        validate_confirm_password: {
+          required: "Please provide a password",
+          minlength: "Your password must be at least 5 characters long",
+          equalTo: "Please enter the same password as above"
+        },
+        validate_email: "Informe um endereço de email válido",
+		validate_cpf: {
+		  required: "Informe um CPF válido",
+		  minlength: "Campo incompleto"
+		},
+		validate_borndate: {
+		  required: "Informe uma data válida",
+		  minlength: "Campo incompleto"
+		},
+        validate_agree: "Please accept our policy"
+      }
+    });
+
+    // propose username by combining first- and lastname
+    $("#username").focus(function() {
+      var firstname = $("#firstname").val();
+      var lastname = $("#lastname").val();
+      if (firstname && lastname && !this.value) {
+        this.value = firstname + "." + lastname;
+      }
+    });
+
+
+    $('.mask-date').mask('00/00/0000');
+    $('.mask-time').mask('00:00:00');
+    $('.mask-date_time').mask('00/00/0000 00:00:00');
+    $('.mask-cep').mask('00000-000');
+    $('.mask-phone').mask('0000-0000');
+    $('.mask-phone_with_ddd').mask('(00) 0000-0000');
+    $('.mask-phone_us').mask('(000) 000-0000');
+    $('.mask-mixed').mask('AAA 000-S0S');
+    $('.mask-cpf').mask('000.000.000-00', {reverse: false});
+    $('.mask-money').mask('000.000.000.000.000,00', {reverse: true});
+    $('.mask-money2').mask("#.##0,00", {reverse: true});
+    $('.mask-ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+      translation: {
+        'Z': {
+          pattern: /[0-9]/, optional: true
+        }
+      }
+    });
+    $('.mask-ip_address').mask('099.099.099.099');
+    $('.mask-percent').mask('##0,00%', {reverse: true});
+    $('.mask-clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+    $('.mask-placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('.mask-fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/, 
+          fallback: '/'
+        }, 
+        placeholder: "__/__/____"
+      }
+    });
+    $('.mask-selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+
+    var options =  {onKeyPress: function(cep, e, field, options){
+      var masks = ['00000-000', '0-00-00-00'];
+      mask = (cep.length>7) ? masks[1] : masks[0];
+      $('.mask-crazy_cep').mask(mask, options);
+    }};
+
+    $('.mask-crazy_cep').mask('00000-000', options);
+
+
+    var options2 =  { 
+      onComplete: function(cep) {
+        alert('CEP Completed!:' + cep);
+      },
+      onKeyPress: function(cep, event, currentField, options){
+        console.log('An key was pressed!:', cep, ' event: ', event, 
+          'currentField: ', currentField, ' options: ', options);
+      },
+      onChange: function(cep){
+        console.log('cep changed! ', cep);
+      },
+      onInvalid: function(val, e, f, invalid, options){
+        var error = invalid[0];
+        console.log ("Digit: ", error.v, " is invalid for the position: ", error.p, ". We expect something like: ", error.e);
+      }
+    };
+
+    $('.mask-cep_with_callback').mask('00000-000', options2);
+
+    var SPMaskBehavior = function (val) {
+      return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    spOptions = {
+      onKeyPress: function(val, e, field, options) {
+        field.mask(SPMaskBehavior.apply({}, arguments), options);
+      }
+    };
+
+    $('.mask-sp_celphones').mask(SPMaskBehavior, spOptions);
+
+
+
+    var slider = document.getElementById('noui-slider');
+    noUiSlider.create(slider, {
+      start: [20, 80],
+      connect: true,
+      range: {
+        'min': 0,
+        'max': 100
+      }
+    });
+
+    var slider = document.getElementById('noui-range');
+    noUiSlider.create(slider, {
+                        start: [ 20, 80 ], // Handle start position
+                        step: 10, // Slider moves in increments of '10'
+                        margin: 20, // Handles must be more than '20' apart
+                        connect: true, // Display a colored bar between the handles
+                        direction: 'rtl', // Put '0' at the bottom of the slider
+                        orientation: 'vertical', // Orient the slider vertically
+                        behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+                        range: { // Slider can select '0' to '100'
+                        'min': 0,
+                        'max': 100
+                      },
+                        pips: { // Show a scale with the slider
+                          mode: 'steps',
+                          density: 2
+                        }
+                      });
+
+
+
+    $(".select2-A").select2({
+      placeholder: "Select a state",
+      allowClear: true
+    });
+
+    $(".select2-B").select2({
+      tags: true
+    });
+
+    $("#range1").ionRangeSlider({
+      type: "double",
+      grid: true,
+      min: -1000,
+      max: 1000,
+      from: -500,
+      to: 500
+    });
+
+    $('.dateAnimate').bootstrapMaterialDatePicker({ weekStart : 0, time: false,animation:true});
+    $('.date').bootstrapMaterialDatePicker({ weekStart : 0, time: false});
+    $('.time').bootstrapMaterialDatePicker({ date: false,format:'HH:mm',animation:true});
+    $('.datetime').bootstrapMaterialDatePicker({ format : 'dddd DD MMMM YYYY - HH:mm',animation:true});
+    $('.date-fr').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', lang : 'fr', weekStart : 1, cancelText : 'ANNULER'});
+    $('.min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
+
+
+    $(".dial").knob({
+      height:80
+    });
+
+    $('.dial1').trigger(
+     'configure',
+     {
+       "min":10,
+       "width":80,
+       "max":80,
+       "fgColor":"#FF6656",
+       "skin":"tron"
+     }
+     );
+
+    $('.dial2').trigger(
+     'configure',
+     {
+
+       "width":80,
+       "fgColor":"#FF6656",
+       "skin":"tron",
+       "cursor":true
+     }
+     );
+
+    $('.dial3').trigger(
+     'configure',
+     {
+
+       "width":80,
+       "fgColor":"#27C24C",
+     }
+     );
+  });
+
+  
+  
+  
+</script>
+<!-- end: Javascript -->	
+	
+
+</body>
+</html>	
