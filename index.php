@@ -7,7 +7,7 @@
   <meta name="author" content="Isna Nur Azis">
   <meta name="keyword" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miminium</title>
+  <title>GerAPAE - Login</title>
 
   <!-- start: Css -->
   <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
@@ -32,34 +32,34 @@
 
       <div class="container">
 
-        <form class="form-signin">
+        <form class="form-signin" method="post" role="form" action="ope.php" id="formlogin" name="formlogin">
           <div class="panel periodic-login">
-              <span class="atomic-number">28</span>
               <div class="panel-body text-center">
-                  <h1 class="atomic-symbol">Mi</h1>
-                  <p class="atomic-mass">14.072110</p>
-                  <p class="element-name">Miminium</p>
+                  <h1 class="atomic-symbol">GA</h1>
+                  
+                  <p class="element-name">Login</p>
 
                   <i class="icons icon-arrow-down"></i>
+				  
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="text" class="form-text" required>
+                    <input type="text" class="form-text mask-cpf" id="login_cpf" name="login_cpf" required>
                     <span class="bar"></span>
-                    <label>Username</label>
+                    <label>CPF</label>
                   </div>
+				  
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="password" class="form-text" required>
+                    <input type="password" type="text" class="form-text" id="senha" name="senha" required required>
                     <span class="bar"></span>
-                    <label>Password</label>
+                    <label>Senha</label>
                   </div>
                   <label class="pull-left">
-                  <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Remember me
+                  <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Lembre-me
                   </label>
-                  <input type="submit" class="btn col-md-12" value="SignIn"/>
+                  <input type="submit" class="btn col-md-12" value="Entrar"/>
               </div>
                 <div class="text-center" style="padding:5px;">
-                    <a href="forgotpass.html">Forgot Password </a>
-                    <a href="reg.html">| Signup</a>
-                </div>
+                    <a href="forgotpass.html">Esqueceu a senha? </a>
+                   </div>
           </div>
         </form>
 
