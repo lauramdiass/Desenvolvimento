@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if((isset ($_SESSION['cpf']) == true) and (isset ($_SESSION['senha']) == true)) {
+	header('location:home.php');
+	}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

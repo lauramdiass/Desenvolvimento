@@ -1,14 +1,23 @@
 <!-- start:Left Menu -->
+
+
             <div id="left-menu">
               <div class="sub-left-menu scroll">
 			  
                 <ul class="nav nav-list">
                     <li><div class="left-bg"></div></li>
                    
-				  <!-- data --> <li class="time">
+				  <!-- DATA --> 
+				  <li class="time">
                       <h1 class="animated fadeInLeft">21:00</h1>
                       <p class="animated fadeInRight">Sat,October 1st 2029</p>
                     </li> <!-- data --> 
+					
+					
+					<!-- ADMINISTRADOR -->
+					<?php					
+					 if (strcasecmp ($_SESSION['descricao'],'Administrador') == 0){
+					?>					
 					
 					<li class="active ripple">
                       <a class="tree-toggle nav-header"><span class="fa-home fa"></span> Gerenciar Usuários 
@@ -23,8 +32,67 @@
 						  
 						  
                       </ul>
-					
-                      <li class="active ripple">
+					 </li>
+					  
+					  <?php						
+						}
+					  ?>
+					  
+					  <!-- RECEPCIONISTA -->
+					  <?php					
+						if (strcasecmp ($_SESSION['descricao'],'Recepcionista') == 0){
+					  ?>	
+					  
+					  <?php						
+						}
+					  ?>
+					  
+					  <!-- FISIOTERAPEUTA -->
+					  <?php					
+					   if (strcasecmp ($_SESSION['descricao'],'Fisioterapeuta') == 0){
+					  ?>	
+					  
+					  <?php						
+						}
+					  ?>
+					  
+					  <!-- PSICÓLOGO -->
+					  <?php					
+					   if (strcasecmp ($_SESSION['descricao'],'Psicologo') == 0){
+					  ?>
+					  
+					  <?php						
+						}
+					  ?>
+					  					  
+					  <!-- ASSISTENTE SOCIAL -->
+					  <?php					
+					   if (strcasecmp ($_SESSION['descricao'],'Assistente Social') == 0){
+					  ?>
+					  
+					  <?php						
+						}
+					  ?>
+					  					  
+					  <!-- FONOAUDIÓLOGO -->
+					  <?php					
+					   if (strcasecmp ($_SESSION['descricao'],'Fonoaudiologo') == 0){
+					  ?>
+					  
+					  <?php						
+						}
+					  ?>
+					  
+					  <!-- PEDAGOGO -->
+					  <?php					
+					   if (strcasecmp ($_SESSION['descricao'],'Pedagogo') == 0){
+					  ?>
+					  
+					  <?php						
+						}
+					  ?>
+					  
+                      <!-- <li class="active ripple">
                       <a class="tree-toggle nav-header"><span class="fa-home fa"></span> Gerenciar PCDs 
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
@@ -33,7 +101,7 @@
 						 <li><a href="#">Editar PCD</a></li>
 						 <li><a href="#">Excluir PCDs</a></li>
                          <li><a href="#">Listar PCDs</a></li>
-                      </ul>
+                      </ul> -->
 					  
 					<!-- <li class="ripple"><a href="asset/html-php/formularioCadastroDePCD.html"><span class="fa fa-calendar-o"></span>bla</a></li>
 					<li class="ripple"><a href="asset/html-php/listagem.php"><span class="fa fa-calendar-o"></span>ble</a></li>
